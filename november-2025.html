@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Taming CRDTs and Fast Columnar Full Text Search | Munich Database Meetup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+</head>
+
+<body>
+  <a href="/">Munich Database Meetup</a>
+  <h1>November Edition @ codecentric: Taming CRDTs and Fast Columnar Full Text Search</h1>
+  <p>
+    We're back on November 11th for another evening of deep database technical discussions! This time, we're hosted at
+    codecentric AG, featuring talks on tail latency optimization and CRDT implementations over constrained networks.
+  </p>
+  <h2>Event Details</h2>
+  <ul>
+    <li><strong>📍 Venue:</strong> codecentric AG, August-Everding-Straße 20, München</li>
+    <li><strong>📅 Date & Time:</strong> Tuesday, November 11th, doors open at 18:30</li>
+    <li><strong>🍕 As always, pizza and networking are included!</strong></li>
+  </ul>
+  <h2>Our Speakers</h2>
+
+  <h3>Elmi Ahmadov, ClickHouse</h3>
+  <p><strong>Inside ClickHouse full-text search: fast, native, and columnar</strong></p>
+  <p>
+    In this talk, we'll explore how we've completely rebuilt full-text search in ClickHouse, faster, leaner, and fully
+    native to the columnar database design.
+
+    This is a deep technical dive by the engineers who built it, covering the new design from inverted indexes to
+    query-execution tricks that skip reading the text column entirely. If you care about high-performance search without
+    leaving your database, or love seeing database internals stripped bare, this one’s for you.
+  <p><strong>About Speaker:</strong> Elmi Ahmadov is a software engineer at ClickHouse, working from Munich. He is
+    currently focused on improving full-text search performance.</p>
+  </p>
+
+  <h3>Jon Gjengset & Oliver Wangler, Helsing</h3>
+  <p><strong>CRDTs over Painful Networks</strong></p>
+  <p>
+    The best known uses of CRDTs are for collaborative text editing. In that domain, the CRDT semantics help reconcile
+    concurrent edits by multiple online users, as well as users who go offline, make edits, and come back online again
+    later. But the power of CRDTs extends far beyond this binary-online-or-offline use-case.
+
+    At Helsing, we're using CRDTs to share situational awareness over networks that are often severely degraded; through
+    long distances, radio silence, moving nodes, and jamming. And this is where CRDTs truly shine, giving high
+    availability and partition tolerance while ensuring eventual consistency when connectivity is available. Through the
+    use of delta-state, data schemas, custom serialisation protocols, and more, we can operate even over network bearers
+    with severely constrained bandwidth. In this talk, we'll go through some of the mechanisms that make this possible,
+    the DSON crate we've open-sourced as part of the work, and some observations about interesting open questions that
+    remain.
+  <p><strong>About Speaker:</strong> Jon Gjengset is a Principal Engineer at Helsing, author of Rust for Rustaceans, and
+    general Rust educator. Oliver Wangler is a hacker by day and by night, focused on coding systems and seeing them do
+    what they were intended to do in production.</p>
+  </p>
+
+  <h2>🗓 Agenda</h2>
+  <ul>
+    <li>🔹 18:30: Doors Open</li>
+    <li>🔹 18:40: Welcome</li>
+    <li>🔹 18:45: Talk #1: Paul R. Willems & Daniel Ritter</li>
+    <li>🔹 19:30: Pizza & Networking 🍕</li>
+    <li>🔹 20:00: Talk #2: Daniel van Eeden</li>
+    <li>🔹 21:00: End</li>
+  </ul>
+  <p>
+    This event will provide deep technical insights into performance optimization at the CPU level, distributed
+    consistency models, and practical CRDT implementations in production systems. Whether you're working on database
+    internals, distributed systems, or high-performance computing, expect an evening of practical implementation details
+    and battle-tested approaches.
+  </p>
+  <p>
+    See you there! 🚀
+  </p>
+</body>
+
+</html>
