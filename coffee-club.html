@@ -160,11 +160,8 @@
   </footer>
 
   <script>
-    // === Configuration =====================================================
-    // Neon Data API (PostgREST). Posts a row into the coffee_club_signups table.
-    const NEON_ENDPOINT =
-      "https://ep-bold-mouse-asdc6081.apirest.c-4.eu-central-1.aws.neon.tech/neondb/rest/v1/coffee_club_signups";
-    // =======================================================================
+    const ENDPOINT = "https://psrcaptdbngxkzyrsqmh.supabase.co/rest/v1/coffee_club_signups";
+    const ANON_KEY = "sb_publishable_WJvsUHCVNvArE0QfptQysg_bHkSG8OH";
 
     const form = document.getElementById("coffee-club-form");
     const statusEl = document.getElementById("status");
@@ -206,12 +203,13 @@
       submitBtn.textContent = "Sending…";
 
       try {
-        const response = await fetch(NEON_ENDPOINT, {
+        const response = await fetch(ENDPOINT, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            // Don't ask PostgREST to return the inserted row (needs no SELECT grant).
             "Prefer": "return=minimal",
+            "apikey": ANON_KEY,
+            "Authorization": `Bearer ${ANON_KEY}`,
           },
           body: JSON.stringify(payload),
         });
